@@ -6,7 +6,9 @@ import TopNavLink from "./TopNavLink";
 import "./TopNav.css";
 import DarkToggle from "../DarkToggle";
 import { useSelector } from "react-redux";
-
+import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Dropdown from "react-bootstrap/Dropdown";
 const TopNav = () => {
   const darkToggle = useSelector((state) => state.theme);
 
@@ -30,6 +32,23 @@ const TopNav = () => {
             <TopNavLink to="/movies" label="Movies" />
             <TopNavLink to="/favorites" label="Favorites" />
             <TopNavLink to="/about" label="About" />
+            {/* <Dropdown as={ButtonGroup}>
+              <Button variant="basic" href="/movies">
+                Split Button
+              </Button>
+
+              <Dropdown.Toggle
+                split
+                variant="basic"
+                id="dropdown-split-basic"
+              />
+
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown> */}
           </Nav>
         </Navbar.Collapse>
         <DarkToggle />
