@@ -1,0 +1,15 @@
+.item-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 40px;
+  min-height: 78vh;
+}
+.img-details {
+  width: 50%;
+  height: 400px;
+}
+.icons-details {
+}
