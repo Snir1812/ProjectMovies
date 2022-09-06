@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import "./App.css";
 import { useSelector } from "react-redux";
 import Footer from "./components/footer/Footer";
+import HistoryCategory from "./pages/HistoryCategory";
 
 const App = () => {
   useMovies();
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
         <Route path="/movies/:movieId" element={<MovieDetails />} />
+        <Route path="/history" element={<HistoryCategory />} />
       </Routes>
       <Footer />
     </div>
