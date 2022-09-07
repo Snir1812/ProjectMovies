@@ -5,13 +5,14 @@ import { MdMovieFilter } from "react-icons/md";
 import TopNavLink from "./TopNavLink";
 import "./TopNav.css";
 import DarkToggle from "../DarkToggle";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
+import { fetchMovies } from "../../features/movies/movies-slice";
 const TopNav = () => {
   const darkToggle = useSelector((state) => state.theme);
-
+  const dispatch = useDispatch();
   return (
     <Navbar
       expand="lg"
@@ -30,7 +31,9 @@ const TopNav = () => {
           <Nav className="me-auto">
             <TopNavLink to="/" label="Home" />
             <Dropdown as={ButtonGroup}>
-              <TopNavLink to="/movies" label="Movies" />
+              <span onClick={() => dispatch(fetchMovies(""))}>
+                <TopNavLink to="/movies" label="Movies" />
+              </span>
               <Dropdown.Toggle
                 split
                 variant="basic"
