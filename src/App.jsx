@@ -6,12 +6,11 @@ import About from "./pages/About";
 import Favorites from "./pages/Favorites";
 import MovieDetails from "./pages/MovieDetails";
 import Movies from "./pages/Movies";
-import useMovies from "./hooks/useMovies";
 import Home from "./pages/Home";
 import "./App.css";
 import { useSelector } from "react-redux";
 import Footer from "./components/footer/Footer";
-import CategoryMovies from "./pages/CategoryMovies";
+// import CategoryMovies from "./pages/CategoryMovies";
 
 const App = () => {
   const darkToggle = useSelector((state) => state.theme);
@@ -26,11 +25,11 @@ const App = () => {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
         <Route path="/movies/:movieId" element={<MovieDetails />} />
-        <Route path="/history" element={<CategoryMovies category="36" />} />
-        <Route path="/drama" element={<CategoryMovies category="18" />} />
-        <Route path="/comedy" element={<CategoryMovies category="35" />} />
-        <Route path="/romance" element={<CategoryMovies category="10749" />} />
-        <Route path="/action" element={<CategoryMovies category="28" />} />
+        <Route path="/history" element={<Movies category="36" />} />
+        <Route path="/drama" element={<Movies category="18" />} />
+        <Route path="/comedy" element={<Movies category="35" />} />
+        <Route path="/romance" element={<Movies category="10749" />} />
+        <Route path="/action" element={<Movies category="28" />} />
       </Routes>
       <Footer />
     </div>

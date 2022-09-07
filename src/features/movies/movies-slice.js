@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { movieUrl } from "../../services/movies-service";
 import { imageUrl } from "../../services/movies-service";
-// import Swal from "sweetalert2";
 
 const initialState = {
   movies: [],
@@ -57,12 +56,6 @@ const moviesSlice = createSlice({
       state.loading = false;
       state.movies = action.payload;
       state.error = "";
-      // Swal.fire({
-      //   icon: "success",
-      //   titel: "Movies loaded",
-      //   showConfirmButton: false,
-      //   timer: 1500,
-      // });
     });
     builder.addCase(fetchMovies.rejected, (state, action) => {
       state.loading = false;

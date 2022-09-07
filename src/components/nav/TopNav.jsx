@@ -29,26 +29,24 @@ const TopNav = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <TopNavLink to="/" label="Home" />
-            <TopNavLink to="/movies" label="Movies" />
-            <TopNavLink to="/favorites" label="Favorites" />
-            <TopNavLink to="/about" label="About" />
-            {/* <Dropdown as={ButtonGroup}>
-              <Button variant="basic" href="/movies">
-                Split Button
-              </Button>
-
+            <Dropdown as={ButtonGroup}>
+              <TopNavLink to="/movies" label="Movies" />
               <Dropdown.Toggle
                 split
                 variant="basic"
                 id="dropdown-split-basic"
+                className="border-0"
               />
-
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                <Dropdown.Item href="/history">History</Dropdown.Item>
+                <Dropdown.Item href="/drama">Drama</Dropdown.Item>
+                <Dropdown.Item href="/comedy">Comedy</Dropdown.Item>
+                <Dropdown.Item href="/romance">Romance</Dropdown.Item>
+                <Dropdown.Item href="/action">Action</Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown> */}
+            </Dropdown>
+            <TopNavLink to="/favorites" label="Favorites" />
+            <TopNavLink to="/about" label="About" />
           </Nav>
         </Navbar.Collapse>
         <DarkToggle />
