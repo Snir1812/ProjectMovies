@@ -14,7 +14,6 @@ import Footer from "./components/footer/Footer";
 import CategoryMovies from "./pages/CategoryMovies";
 
 const App = () => {
-  useMovies();
   const darkToggle = useSelector((state) => state.theme);
 
   return (
@@ -23,7 +22,7 @@ const App = () => {
       {/* <LoaderSpinner /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/movies" element={<Movies category="" />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
         <Route path="/movies/:movieId" element={<MovieDetails />} />

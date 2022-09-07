@@ -3,11 +3,12 @@ import MovieItem from "../components/movieItem/MovieItem";
 import "../components/Movies.css";
 import SortAzButton from "../components/sortAzButton/SortAzButton";
 import SortZaButton from "../components/sortZaButton/SortZaButton";
+import useMovies from "../hooks/useMovies";
 
-const Movies = () => {
+const Movies = ({ category }) => {
   const movies = useSelector((s) => s.movie.movies);
-
-  // console.log(movies);
+  useMovies(category);
+  console.log(category);
 
   return (
     <div className="container">
