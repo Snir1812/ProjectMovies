@@ -12,16 +12,14 @@ export const fetchMovies = createAsyncThunk("movie/fetch", (category) => {
   return fetch(movieUrl(category))
     .then((response) => response.json())
     .then((json) => json.results)
-    .then((movies) => {
-      const mapped = movies.map((m) => ({
+    .then((movies) =>
+      movies.map((m) => ({
         ...m,
         poster_path: imageUrl(m.poster_path),
         backdrop_path: imageUrl(m.backdrop_path),
         isFavorite: false,
-      }));
-      console.log(mapped);
-      return mapped;
-    });
+      }))
+    );
 });
 
 const moviesSlice = createSlice({

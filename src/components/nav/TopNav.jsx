@@ -6,10 +6,11 @@ import TopNavLink from "./TopNavLink";
 import "./TopNav.css";
 import DarkToggle from "../DarkToggle";
 import { useDispatch, useSelector } from "react-redux";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 import { fetchMovies } from "../../features/movies/movies-slice";
+import Login from "../login/Login";
 const TopNav = () => {
   const darkToggle = useSelector((state) => state.theme);
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const TopNav = () => {
       expand="lg"
       className={darkToggle.darkTheme ? "navbar-dark" : "navbar"}
     >
-      <Container>
+      <Container className=" gap-3">
         <NavLink to="/" className="navbar-brand logo-icon">
           <span color={darkToggle.darkTheme ? "black" : "white"}>
             Movie App
@@ -52,6 +53,7 @@ const TopNav = () => {
             <TopNavLink to="/about" label="About" />
           </Nav>
         </Navbar.Collapse>
+        <Login />
         <DarkToggle />
       </Container>
     </Navbar>

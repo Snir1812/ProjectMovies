@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+// import React, { useEffect } from "react";
+// import { useState } from "react";
 import { useSelector } from "react-redux";
 import MovieItem from "../components/movieItem/MovieItem";
 import "../components/Movies.css";

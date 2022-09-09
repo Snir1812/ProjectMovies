@@ -8,7 +8,7 @@ import useMovies from "../hooks/useMovies";
 const Movies = ({ category }) => {
   const movies = useSelector((s) => s.movie.movies);
   useMovies(category);
-  console.log(category);
+  // console.log(category);
 
   return (
     <div className="container">
