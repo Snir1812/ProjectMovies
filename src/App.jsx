@@ -11,6 +11,7 @@ import "./App.css";
 import { useSelector } from "react-redux";
 import Footer from "./components/footer/Footer";
 import LoginPage from "./pages/LoginPage";
+import SecondNav from "./components/secondNav/SecondNav";
 // import CategoryMovies from "./pages/CategoryMovies";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <div className={darkToggle.darkTheme ? "dark" : "light"}>
       <TopNav />
+      <SecondNav />
       {/* <LoaderSpinner /> */}
       <Routes>
         <Route path="/" element={<Home />} />
