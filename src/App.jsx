@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import "./App.css";
 import { useSelector } from "react-redux";
 import Footer from "./components/footer/Footer";
+import LoginPage from "./pages/LoginPage";
 // import CategoryMovies from "./pages/CategoryMovies";
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/comedy" element={<Movies category="35" />} />
         <Route path="/romance" element={<Movies category="10749" />} />
         <Route path="/action" element={<Movies category="28" />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
       <Footer />
     </div>

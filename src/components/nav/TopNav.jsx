@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 import { fetchMovies } from "../../features/movies/movies-slice";
-import Login from "../login/Login";
+import LoginButton from "../login/LoginButton";
 const TopNav = () => {
   const darkToggle = useSelector((state) => state.theme);
   const dispatch = useDispatch();
@@ -53,7 +53,7 @@ const TopNav = () => {
             <TopNavLink to="/about" label="About" />
           </Nav>
         </Navbar.Collapse>
-        <Login />
+        <LoginButton />
         <DarkToggle />
       </Container>
     </Navbar>
