@@ -26,7 +26,7 @@ const TopNav = () => {
           </span>
           <MdMovieFilter color={darkToggle.darkTheme ? "white" : "black"} />
         </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="humburger" />
         {/* --- */}
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -53,8 +53,10 @@ const TopNav = () => {
             <TopNavLink to="/about" label="About" />
           </Nav>
         </Navbar.Collapse>
-        <LoginButton />
-        <DarkToggle />
+        <div className=" d-flex gap-3">
+          <LoginButton />
+          <DarkToggle />
+        </div>
       </Container>
     </Navbar>
   );

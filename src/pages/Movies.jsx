@@ -8,7 +8,8 @@ import useMovies from "../hooks/useMovies";
 const Movies = ({ category }) => {
   const movies = useSelector((s) => s.movie.movies);
   useMovies(category);
-  // console.log(category);
+  // console.log(movies.map((x) => x.title));
+  // console.log(movies);
 
   return (
     <div className="container">
@@ -18,7 +19,7 @@ const Movies = ({ category }) => {
       </div>
       <div className="card-list">
         {movies.map((m) => (
-          <MovieItem key={m.id} movie={m} />
+          <MovieItem key={m.id} movie={m} title={m.title} />
         ))}
       </div>
     </div>

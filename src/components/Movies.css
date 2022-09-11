@@ -1,12 +1,23 @@
 .card-list {
   padding: 15px 0 30px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 45vh 45vh 45vh 45vh 45vh;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-rows: auto;
+  /* grid-template-rows: 45vh 45vh 45vh 45vh 45vh; */
+  min-height: 78vh;
   gap: 2rem;
 }
 .sort-buttons-div {
   display: flex;
   flex-direction: row-reverse;
   padding-top: 15px;
+}
+.comment {
+  height: 400px;
+  width: 200px;
+  background: white;
+  position: absolute;
+  top: 135px;
+  left: 87%;
 }

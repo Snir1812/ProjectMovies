@@ -36,3 +36,12 @@
 .white {
   color: white;
 }
+.humburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  height: 30px;
+  border: 1px black solid;
+  color: black;
+}

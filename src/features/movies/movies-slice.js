@@ -47,9 +47,7 @@ const moviesSlice = createSlice({
       state.movies = state.movies.filter((item) => item.id !== action.payload);
     },
     sortAzMovies: (state, action) => {
-      const title = state.movies.filter((item) => item.title);
-      const sortBy = action.payload;
-      state.movies = state.movies[title].sort((a, b) => b[sortBy] - a[sortBy]);
+      state.movies.sort((a, b) => (b.title < a.title ? 1 : -1));
     },
   },
   extraReducers: (builder) => {

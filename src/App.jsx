@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className={darkToggle.darkTheme ? "dark" : "light"}>
       <TopNav />
-      <SecondNav />
+      {/* <SecondNav /> */}
       {/* <LoaderSpinner /> */}
       <Routes>
         <Route path="/" element={<Home />} />
