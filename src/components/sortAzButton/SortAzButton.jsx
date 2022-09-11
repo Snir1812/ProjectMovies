@@ -5,12 +5,12 @@ import { useDispatch } from "react-redux";
 import { sortAzMovies } from "../../features/movies/movies-slice";
 import { useSelector } from "react-redux";
 
-const SortAzButton = ({ movies }) => {
+const SortAzButton = () => {
   const dispatch = useDispatch();
   const darkToggle = useSelector((state) => state.theme);
 
   const handleSortAzMovie = () => {
-    dispatch(sortAzMovies(movies));
+    dispatch(sortAzMovies());
     console.log("sorted");
     // console.log(title);
   };

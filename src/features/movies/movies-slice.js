@@ -49,6 +49,9 @@ const moviesSlice = createSlice({
     sortAzMovies: (state, action) => {
       state.movies.sort((a, b) => (b.title < a.title ? 1 : -1));
     },
+    sortZaMovies: (state, action) => {
+      state.movies.sort((a, b) => (b.vote_average > a.vote_average ? 1 : -1));
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchMovies.pending, (state) => {
@@ -70,5 +73,10 @@ const moviesSlice = createSlice({
 });
 
 export default moviesSlice.reducer;
-export const { toggleFavorite, addMovies, removeMovies, sortAzMovies } =
-  moviesSlice.actions;
+export const {
+  toggleFavorite,
+  addMovies,
+  removeMovies,
+  sortAzMovies,
+  sortZaMovies,
+} = moviesSlice.actions;

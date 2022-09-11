@@ -8,7 +8,7 @@ import useMovies from "../hooks/useMovies";
 const Movies = ({ category }) => {
   const movies = useSelector((s) => s.movie.movies);
   useMovies(category);
-  // console.log(movies.map((x) => x.title));
+  // console.log(movies.map((x) => x.release_date));
   // console.log(movies);
 
   return (
