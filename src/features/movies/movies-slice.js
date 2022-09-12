@@ -63,9 +63,10 @@ const moviesSlice = createSlice({
       let categories = Object.keys(state.movies);
       for (let category of categories) {
         state.search[category] = state.movies[category].filter(
-          (newMovie) =>
-            newMovie.title.toLowerCase().includes(query) ||
-            (newMovie.description && newMovie.category)
+          (newsPiece) =>
+            newsPiece.title.toLowerCase().includes(query) ||
+            (newsPiece.description &&
+              newsPiece.description.toLowerCase().includes(query))
         );
       }
     },

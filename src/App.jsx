@@ -11,7 +11,8 @@ import "./App.css";
 import { useSelector } from "react-redux";
 import Footer from "./components/footer/Footer";
 import LoginPage from "./pages/LoginPage";
-import SecondNav from "./components/secondNav/SecondNav";
+import Comments from "./pages/Comments";
+// import SecondNav from "./components/secondNav/SecondNav";
 // import CategoryMovies from "./pages/CategoryMovies";
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/romance" element={<Movies category="10749" />} />
         <Route path="/action" element={<Movies category="28" />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/comments" element={<Comments />} />
       </Routes>
       <Footer />
     </div>
