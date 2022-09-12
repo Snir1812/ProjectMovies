@@ -11,6 +11,8 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 import { fetchMovies } from "../../features/movies/movies-slice";
 import LoginButton from "../login/LoginButton";
+import Search from "../search/Search";
+
 const TopNav = () => {
   const darkToggle = useSelector((state) => state.theme);
   const dispatch = useDispatch();
@@ -53,10 +55,12 @@ const TopNav = () => {
             <TopNavLink to="/about" label="About" />
           </Nav>
         </Navbar.Collapse>
-        <div className=" d-flex gap-3">
+        <div className=" d-flex gap-3 justify-content-center align-items-center">
+          <Search />
           <LoginButton />
           <DarkToggle />
         </div>
+        {/* <Search /> */}
       </Container>
     </Navbar>
   );

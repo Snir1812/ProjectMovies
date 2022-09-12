@@ -4,6 +4,7 @@ import { imageUrl } from "../../services/movies-service";
 
 const initialState = {
   movies: [],
+  search: [],
   error: "",
   loading: false,
 };
@@ -52,6 +53,22 @@ const moviesSlice = createSlice({
     sortZaMovies: (state, action) => {
       state.movies.sort((a, b) => (b.vote_average > a.vote_average ? 1 : -1));
     },
+    search: (state, action) => {
+      let query = action.payload;
+      if (!query || query === null || query.trim().length < 1) {
+        state.search = { ...state.movies };
+        return;
+      }
+      query = query.toLowerCase();
+      let categories = Object.keys(state.movies);
+      for (let category of categories) {
+        state.search[category] = state.movies[category].filter(
+          (newMovie) =>
+            newMovie.title.toLowerCase().includes(query) ||
+            (newMovie.description && newMovie.category)
+        );
+      }
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchMovies.pending, (state) => {
@@ -79,4 +96,5 @@ export const {
   removeMovies,
   sortAzMovies,
   sortZaMovies,
+  search,
 } = moviesSlice.actions;

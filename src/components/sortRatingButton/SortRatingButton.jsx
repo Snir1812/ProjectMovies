@@ -1,11 +1,11 @@
 import React from "react";
 import { FcRating } from "react-icons/fc";
-import "./SortZaButton.css";
+import "./SortRatingButton.css";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { sortZaMovies } from "../../features/movies/movies-slice";
 
-const SortZaButton = () => {
+const SortRatingButton = () => {
   const darkToggle = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
@@ -26,4 +26,4 @@ const SortZaButton = () => {
   );
 };
 
-export default SortZaButton;
+export default SortRatingButton;
