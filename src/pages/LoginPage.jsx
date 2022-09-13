@@ -11,7 +11,7 @@ const LoginPage = () => {
     <div className="login">
       <div className={darkToggle.darkTheme ? "login-form-dark" : "login-form"}>
         <h1>Login Form</h1>
-        <input type="text" placeholder="User Name" />
+        <input type="text" placeholder="User Name" className=" text-center" />
         <button
           onClick={() => {
             navigate(-1);
