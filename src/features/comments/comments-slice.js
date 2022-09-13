@@ -8,12 +8,12 @@ const initialState = {
       Date: "12 / 2 / 2002",
     },
     {
-      MovieName: "Dragon Ball",
+      MovieName: "Ball Ball",
       YourOpinion: "Very good movie",
       Date: "12 / 2 / 2002",
     },
     {
-      MovieName: "Dragon Ball",
+      MovieName: "Dragon Dragon",
       YourOpinion: "Very good movie",
       Date: "12 / 2 / 2002",
     },
@@ -26,4 +26,4 @@ const commentsSlice = createSlice({
   reducers: {},
 });
 export default commentsSlice.reducer;
-// export const {} = commentsSlice.actions;
+// export const {  } = commentsSlice.actions;

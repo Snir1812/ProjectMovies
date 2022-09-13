@@ -1,0 +1,9 @@
+.comments-list {
+  padding: 20px 0px;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}

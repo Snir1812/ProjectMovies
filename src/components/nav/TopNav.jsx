@@ -53,6 +53,7 @@ const TopNav = () => {
             </Dropdown>
             <TopNavLink to="/favorites" label="Favorites" />
             <TopNavLink to="/about" label="About" />
+            <TopNavLink to="/comments" label="Comments" />
           </Nav>
         </Navbar.Collapse>
         <div className=" d-flex gap-3 justify-content-center align-items-center">
