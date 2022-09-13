@@ -18,6 +18,25 @@ const Comments = () => {
             Date={m.Date}
           />
         ))}
+        <div className="add-comment">
+          <h4>Add your commant : </h4>
+          <input
+            type="text"
+            placeholder="Movie's name"
+            className="add-input text-center"
+          />
+          <input
+            type="text"
+            placeholder="Your opinion"
+            className="add-input text-center"
+          />
+          <input
+            type="text"
+            placeholder="Date"
+            className="add-input text-center"
+          />
+          <button className="add-button">Submit</button>
+        </div>
       </div>
     </div>
   );

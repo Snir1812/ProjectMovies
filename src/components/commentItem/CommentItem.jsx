@@ -1,6 +1,6 @@
 import React from "react";
 import "./CommentItem.css";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 
 const CommentItem = (m) => {
   //   const dispatch = useDispatch();
