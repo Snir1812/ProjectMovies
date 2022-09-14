@@ -13,13 +13,13 @@ const Search = () => {
       <Form.Control
         type="search"
         placeholder="Search"
-        className="me-2"
+        className="me-2 text-center"
         aria-label="Search"
         onChange={(e) => dispatch(search(e.target.value))}
       />
-      <Button variant="outline-light" onClick={() => {}}>
+      {/* <Button variant="outline-light" onClick={() => {}}>
         Search
-      </Button>
+      </Button> */}
     </Form>
   );
 };

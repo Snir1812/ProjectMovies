@@ -23,7 +23,17 @@ const initialState = {
 const commentsSlice = createSlice({
   name: "comment",
   initialState,
-  reducers: {},
+  reducers: {
+    addComment: ({ payload }, state) => {
+      const { MovieName, YourOpinion, Date } = payload;
+      const newComment = {
+        MovieName: MovieName,
+        YourOpinion: YourOpinion,
+        Date: Date,
+      };
+      state.comments = { ...state, newComment };
+    },
+  },
 });
 export default commentsSlice.reducer;
-// export const {  } = commentsSlice.actions;
+export const { addComment } = commentsSlice.actions;
