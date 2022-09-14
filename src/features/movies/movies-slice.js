@@ -4,7 +4,7 @@ import { imageUrl } from "../../services/movies-service";
 
 const initialState = {
   movies: [],
-  search: [],
+  // search: [],
   error: "",
   loading: false,
 };
@@ -53,38 +53,35 @@ const moviesSlice = createSlice({
     sortZaMovies: (state, action) => {
       state.movies.sort((a, b) => (b.vote_average > a.vote_average ? 1 : -1));
     },
-    search: (state, action) => {
-      let query = action.payload;
-      if (!query || query === null || query.trim().length < 1) {
-        state.search = { ...state.movies };
+    search: (state, { payload }) => {
+      payload = payload.toLowerCase();
+      if (!payload || payload === null || payload.trim().length < 1) {
+        state.movies = [...state.movies];
         return;
       }
-      query = query.toLowerCase();
-      let categories = Object.keys(state.movies);
-      for (let category of categories) {
-        state.search[category] = state.movies[category].filter(
-          (newsPiece) =>
-            newsPiece.title.toLowerCase().includes(query) ||
-            (newsPiece.description &&
-              newsPiece.description.toLowerCase().includes(query))
-        );
-      }
+      state.movies = state.movies.filter((x) =>
+        x.title.toLowerCase().includes(payload)
+      );
+      console.log(payload);
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchMovies.pending, (state) => {
       state.loading = true;
       state.movies = [];
+      // state.search = [];
       state.error = "";
     });
     builder.addCase(fetchMovies.fulfilled, (state, action) => {
       state.loading = false;
       state.movies = action.payload;
+      // state.search = action.payload;
       state.error = "";
     });
     builder.addCase(fetchMovies.rejected, (state, action) => {
       state.loading = false;
       state.movies = [];
+      // state.search = [];
       state.error = action.error ?? "Something went wrong";
     });
   },

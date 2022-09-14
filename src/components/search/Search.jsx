@@ -10,7 +10,7 @@ const Search = () => {
 
   return (
     <Form className=" d-flex ">
-      <Form.Control
+      <input
         type="search"
         placeholder="Search"
         className="me-2 text-center"
