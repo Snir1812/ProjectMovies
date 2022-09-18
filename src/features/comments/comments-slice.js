@@ -3,16 +3,19 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   comments: [
     {
+      id: 1,
       MovieName: "Dragon Ball",
       YourOpinion: "Very good movie",
       Date: "12 / 2 / 2002",
     },
     {
+      id: 2,
       MovieName: "Ball Ball",
       YourOpinion: "Very good movie",
       Date: "12 / 2 / 2002",
     },
     {
+      id: 3,
       MovieName: "Dragon Dragon",
       YourOpinion: "Very good movie",
       Date: "12 / 2 / 2002",
