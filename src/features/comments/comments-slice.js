@@ -27,14 +27,16 @@ const commentsSlice = createSlice({
   name: "comment",
   initialState,
   reducers: {
-    addComment: ({ payload }, state) => {
-      const { MovieName, YourOpinion, Date } = payload;
-      const newComment = {
-        MovieName: MovieName,
-        YourOpinion: YourOpinion,
-        Date: Date,
-      };
-      state.comments = { ...state, newComment };
+    addComment: (state, { payload }) => {
+      state.comments.push(payload);
+    },
+    deleteComment: (state, { payload }) => {
+      const idx = state.comments.findIndex((c) => c.id === payload);
+      if (idx >= 0) state.comments.splice(idx, 1);
+    },
+    editComment: (state, { payload }) => {
+      const idx = state.comments.findIndex((c) => c.id === payload.id);
+      if (idx >= 0) state.comments[idx] = payload;
     },
   },
 });
