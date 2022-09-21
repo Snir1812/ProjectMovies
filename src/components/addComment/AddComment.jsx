@@ -36,6 +36,7 @@ const AddComment = () => {
 
   return (
     <form onSubmit={addCommentSubmit} className="add-comment">
+      <h4>New Comment</h4>
       <div className="input-label-add">
         <label>Movie's Name</label>
         <input required type="text" className="add-input text-center" />
