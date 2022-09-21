@@ -14,7 +14,7 @@ const Comments = () => {
       <div className="comments-list">
         {commentA.map((m) => (
           <CommentItem
-            // key={m.key}
+            key={m.id}
             MovieName={m.MovieName}
             YourOpinion={m.YourOpinion}
             Date={m.Date}
