@@ -10,6 +10,7 @@ const MovieDetails = () => {
   const { movieId } = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const darkToggle = useSelector((state) => state.theme);
 
   const mid = Number(movieId);
   const movie = useSelector((state) => state.movie.movies).find(
@@ -23,7 +24,14 @@ const MovieDetails = () => {
   }
 
   return (
-    <div className="container item-details">
+    <div
+      // className="container item-details"
+      className={
+        darkToggle.darkTheme
+          ? "container item-details-dark"
+          : "container item-details"
+      }
+    >
       <h2>{movie.title}</h2>
       <img className="img-details" src={movie.poster_path} alt="movie poster" />
       <p>{movie.overview}</p>
@@ -36,7 +44,7 @@ const MovieDetails = () => {
       /> */}
       <div className="icons-details">
         <button
-          className="btn-back"
+          className={darkToggle.darkTheme ? "btn-back-dark" : "btn-back"}
           onClick={() => {
             navigate(-1);
           }}
