@@ -13,7 +13,7 @@ const Search = () => {
       <input
         type="search"
         placeholder="Search"
-        className="me-2 text-center"
+        className="me-2 text-center search"
         aria-label="Search"
         onChange={(e) => dispatch(search(e.target.value))}
       />
