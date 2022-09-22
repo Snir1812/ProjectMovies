@@ -44,7 +44,7 @@ const MovieDetails = () => {
       /> */}
       <div className="icons-details">
         <button
-          className={darkToggle.darkTheme ? "btn-back-dark" : "btn-back"}
+          className="btn-back"
           onClick={() => {
             navigate(-1);
           }}

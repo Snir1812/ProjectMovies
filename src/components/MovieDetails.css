@@ -29,17 +29,14 @@
 /* .icons-details {
 } */
 .btn-back {
-  border-radius: 8px;
-  width: 70px;
   border: 1px solid black;
-  background: rgba(255, 255, 255, 0.27);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background: rgba(255, 255, 255, 0.247);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.btn-back-dark {
-  color: white;
-  border-radius: 8px;
-  width: 70px;
+.btn-back:hover {
   border: 1px solid black;
-  background: rgba(0, 0, 0, 0.123);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background: rgba(255, 255, 255, 0.488);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

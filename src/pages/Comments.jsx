@@ -12,7 +12,6 @@ const Comments = () => {
   return (
     <div className="container">
       <div className="comments-list">
-        <AddComment />
         {commentA.map((m) => (
           <CommentItem
             key={m.id}
@@ -21,6 +20,7 @@ const Comments = () => {
             Date={m.Date}
           />
         ))}
+        <AddComment />
       </div>
     </div>
   );
