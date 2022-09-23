@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import MovieItem from "../components/movieItem/MovieItem";
 import "../components/Movies.css";
+import Search from "../components/search/Search";
 import SortAzButton from "../components/sortAzButton/SortAzButton";
 import SortRatingButton from "../components/sortRatingButton/SortRatingButton";
 import useMovies from "../hooks/useMovies";
@@ -13,9 +14,12 @@ const Movies = ({ category }) => {
 
   return (
     <div className="container">
-      <div className="sort-buttons-div">
-        <SortAzButton />
-        <SortRatingButton />
+      <div className="search-div">
+        <div>
+          <SortAzButton />
+          <SortRatingButton />
+        </div>
+        <Search />
       </div>
       <div className="card-list">
         {movies.map((m) => (

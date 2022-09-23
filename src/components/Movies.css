@@ -3,15 +3,18 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  grid-template-rows: auto;
-  /* grid-template-rows: 45vh 45vh 45vh 45vh 45vh; */
+  /* grid-template-rows: auto; */
+  grid-template-rows: 45vh 45vh 45vh 45vh;
   min-height: 78vh;
   gap: 2rem;
 }
-.sort-buttons-div {
+.search-div {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+  /* justify-content: center; */
   padding-top: 15px;
+  gap: 3rem;
 }
 .comment {
   height: 400px;
