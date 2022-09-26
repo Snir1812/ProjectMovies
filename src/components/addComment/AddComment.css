@@ -9,14 +9,40 @@
   padding: 20px;
   box-shadow: rgb(0, 0, 0) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+.add-comment-dark {
+  border-radius: 12px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px;
+  box-shadow: rgba(255, 255, 255, 0.298) 0px 3px 6px,
+    rgba(255, 255, 255, 0.163) 0px 3px 6px;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.238);
+}
 .add-input {
   border-radius: 8px;
   border: 1px solid black;
   background: rgba(255, 255, 255, 0.106);
 }
+.add-input-dark {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.106);
+}
 .add-button {
   border-radius: 8px;
   background: none;
+  border: 1px solid black;
+}
+.add-button-dark {
+  border-radius: 8px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: white;
 }
 .input-label-add {
   display: flex;

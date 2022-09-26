@@ -5,9 +5,11 @@ import { v4 } from "uuid";
 import { useDispatch } from "react-redux";
 // import "../Comments.css";
 import "./AddComment.css";
+import { useSelector } from "react-redux";
 
 const AddComment = () => {
   const dispatch = useDispatch();
+  const darkToggle = useSelector((state) => state.theme);
 
   // const [MovieName, setMovieName] = useState("");
   // const [YourOpinion, setYourOpinion] = useState("");
@@ -35,21 +37,51 @@ const AddComment = () => {
   };
 
   return (
-    <form onSubmit={addCommentSubmit} className="add-comment">
+    <form
+      onSubmit={addCommentSubmit}
+      className={darkToggle.darkTheme ? "add-comment-dark" : "add-comment"}
+    >
       <h4>New Comment</h4>
       <div className="input-label-add">
         <label>Movie's Name</label>
-        <input required type="text" className="add-input text-center" />
+        <input
+          required
+          type="text"
+          className={
+            darkToggle.darkTheme
+              ? "add-input-dark text-center"
+              : "add-input text-center"
+          }
+        />
       </div>
       <div className="input-label-add">
         <label>Your opinion</label>
-        <input required type="text" className="add-input text-center" />
+        <input
+          required
+          type="text"
+          className={
+            darkToggle.darkTheme
+              ? "add-input-dark text-center"
+              : "add-input text-center"
+          }
+        />
       </div>
       <div className="input-label-add">
         <label>Date</label>
-        <input required type="text" className="add-input text-center" />
+        <input
+          required
+          type="text"
+          className={
+            darkToggle.darkTheme
+              ? "add-input-dark text-center"
+              : "add-input text-center"
+          }
+        />
       </div>
-      <button type="submit" className="add-button ">
+      <button
+        type="submit"
+        className={darkToggle.darkTheme ? "add-button-dark" : "add-button"}
+      >
         Add Comment
       </button>
     </form>
