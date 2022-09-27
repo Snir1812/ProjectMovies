@@ -70,7 +70,7 @@ const AddComment = () => {
         <label>Date</label>
         <input
           required
-          type="text"
+          type="date"
           className={
             darkToggle.darkTheme
               ? "add-input-dark text-center"

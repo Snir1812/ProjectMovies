@@ -6,19 +6,19 @@ const initialState = {
       id: 1,
       MovieName: "Dragon Ball",
       YourOpinion: "Very good movie",
-      Date: "12 / 2 / 2002",
+      Date: "2021-09-27",
     },
     {
       id: 2,
       MovieName: "Ball Ball",
       YourOpinion: "Very good movie",
-      Date: "12 / 2 / 2002",
+      Date: "2022-01-21",
     },
     {
       id: 3,
       MovieName: "Dragon Dragon",
       YourOpinion: "Very good movie",
-      Date: "12 / 2 / 2002",
+      Date: "2022-10-29",
     },
   ],
 };
