@@ -17,6 +17,7 @@ import Comments from "./pages/Comments";
 
 const App = () => {
   const darkToggle = useSelector((state) => state.theme);
+  const searchedQuary = useSelector((state) => state.searched.quary);
 
   return (
     <div className={darkToggle.darkTheme ? "dark" : "light"}>
@@ -25,7 +26,10 @@ const App = () => {
       {/* <LoaderSpinner /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movies" element={<Movies category="" />} />
+        <Route
+          path="/movies"
+          element={<Movies category="" searchedQuary={searchedQuary} />}
+        />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
         <Route path="/movies/:movieId" element={<MovieDetails />} />
