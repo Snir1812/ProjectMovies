@@ -1,0 +1,102 @@
+.cv-div {
+  height: 75vh;
+  width: 90%;
+  background: rgb(99, 156, 213);
+  padding: 10px;
+  display: flex;
+  gap: 0.5rem;
+}
+.cv-left {
+  height: 100%;
+  width: 40%;
+  /* background: bisque; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 0.5rem;
+}
+.cv-imgDiv {
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, 0.212);
+  background-image: url(../../public/logo192.png);
+  padding: 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cv-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 60%;
+  padding: 20px 15px;
+  background: rgba(255, 255, 255, 0.212);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.icon-info {
+  font-size: 35px;
+  color: rgb(49, 48, 48);
+  border: 1px solid rgba(0, 0, 0, 0.239);
+  border-radius: 20px;
+  padding: 5px;
+}
+.icon-info:hover {
+  font-size: 35px;
+  color: rgba(61, 61, 61, 0.728);
+  border: 1px solid rgba(0, 0, 0, 0.239);
+  border-radius: 20px;
+  padding: 5px;
+}
+.cv-info > p {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.cv-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* background: firebrick; */
+}
+.right-up {
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.212);
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.right-down {
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.212);
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skill {
+  background: rgba(128, 128, 128, 0.311);
+  height: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+.in-skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  height: 12px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 12px;
+  margin: 0;
+}
