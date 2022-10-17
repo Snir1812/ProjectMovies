@@ -85,7 +85,7 @@ const About = () => {
             </div>
           </div>
           <div className="right-down">
-            <p className=" fs-4">
+            <p className=" fs-4 d-flex align-items-center gap-2">
               <ImStarHalf />
               skills
             </p>
