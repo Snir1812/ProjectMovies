@@ -26,7 +26,7 @@ const Movies = ({ category, searchedQuary }) => {
         </div>
         <Search />
       </div>
-      <div></div>
+      {/* <div></div> */}
       <div className="card-list">
         {movies.map((m) => (
           <MovieItem key={m.id} movie={m} title={m.title} />
