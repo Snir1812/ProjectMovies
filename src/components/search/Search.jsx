@@ -6,6 +6,7 @@ import { Button, Form } from "react-bootstrap";
 // import { ChangeQuary } from "../../features/search-movie/search-movie-slice";
 import { useState } from "react";
 import { useSearchMovies } from "../../hooks/searchMovie";
+import MovieItem from "../movieItem/MovieItem";
 
 const Search = () => {
   // const dispatch = useDispatch();
@@ -15,11 +16,22 @@ const Search = () => {
 
   const handleSubmit = (text) => {
     setText(text);
-    console.log(results.result);
+    // console.log(results.result);
+  };
+
+  const SearchedItem = () => {
+    if (!results || !results.result) return null;
+    return (
+      <div className="card-list">
+        {results.result.map((m) => (
+          <MovieItem key={m.id} movie={m} title={m.title} />
+        ))}
+      </div>
+    );
   };
 
   return (
-    <Form className=" d-flex ">
+    <div className=" d-flex ">
       <input
         type="search"
         placeholder="Search"
@@ -27,11 +39,12 @@ const Search = () => {
         aria-label="Search"
         onChange={(e) => handleSubmit(e.target.value)}
       />
-      {results && JSON.stringify(results.result)}
+      <SearchedItem />
+      {/* {results && JSON.stringify(results.result)} */}
       {/* <Button variant="outline-light" >
         Search
       </Button> */}
-    </Form>
+    </div>
   );
 };
 
