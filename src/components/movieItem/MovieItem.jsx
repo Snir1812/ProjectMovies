@@ -24,6 +24,7 @@ const MovieItem = ({ movie }) => {
 
   return (
     <div className="card-item">
+      <div className="average">{movie.vote_average}</div>
       <img className="img-card" src={movie.poster_path} alt="movie poster" />
       <div className="item-icons">
         <AddRemoveFavoriteButton movie={movie} />
@@ -37,7 +38,6 @@ const MovieItem = ({ movie }) => {
         </button>
         <DeleteMovieButton movie={movie} />
       </div>
-      <div className="average">{movie.vote_average}</div>
     </div>
   );
 };

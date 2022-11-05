@@ -23,9 +23,9 @@ const Search = () => {
     if (!results || !results.result) return null;
     return (
       <div className="card-list">
-        {results.result.map((m) => (
-          <MovieItem key={m.id} movie={m} title={m.title} />
-        ))}
+        {results.result.map((m) => {
+          return <MovieItem key={m.id} movie={m} title={m.title} />;
+        })}
       </div>
     );
   };
