@@ -39,7 +39,7 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    padding-top: 15px;
+    padding-top: 20px;
     gap: 3rem;
   }
 }
@@ -63,7 +63,7 @@
     flex-direction: row-reverse;
     align-items: center;
     /* justify-content: center; */
-    padding-top: 15px;
+    padding-top: 20px;
     gap: 3rem;
   }
 }
@@ -85,7 +85,7 @@
     flex-direction: row-reverse;
     align-items: center;
     /* justify-content: center; */
-    padding-top: 15px;
+    padding-top: 20px;
     gap: 3rem;
   }
 }
@@ -107,7 +107,7 @@
     flex-direction: row-reverse;
     align-items: center;
     /* justify-content: center; */
-    padding-top: 15px;
+    padding-top: 20px;
     gap: 3rem;
   }
 }
