@@ -7,43 +7,42 @@ import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
 import { useSearchMovies } from "../../hooks/searchMovie";
 import MovieItem from "../movieItem/MovieItem";
+import useSwitchMovies from "../../context/useSwitchMovies";
 
 const Search = () => {
+  const { setSearch } = useSwitchMovies();
   // const dispatch = useDispatch();
-  const [text, setText] = useState();
-  const [results] = useSearchMovies(text);
+  // const [text, setText] = useState();
+  // const [results] = useSearchMovies(text);
   // console.log(search);
 
   const handleSubmit = (text) => {
-    setText(text);
+    setSearch(text);
     // console.log(results.result);
   };
 
-  const SearchedItem = () => {
-    if (!results || !results.result) return null;
-    return (
-      <div className="card-list">
-        {results.result.map((m) => {
-          return <MovieItem key={m.id} movie={m} title={m.title} />;
-        })}
-      </div>
-    );
-  };
+  // const SearchedItem = () => {
+  //   if (!results || !results.result) return null;
+  //   return (
+  //     <div className="card-list">
+  //       {results.result.map((m) => {
+  //         return <MovieItem key={m.id} movie={m} title={m.title} />;
+  //       })}
+  //     </div>
+  //   );
+  // };
 
   return (
     <div className=" d-flex ">
       <input
+        name="text"
         type="search"
         placeholder="Search"
         className="me-2 text-center search"
         aria-label="Search"
         onChange={(e) => handleSubmit(e.target.value)}
       />
-      <SearchedItem />
-      {/* {results && JSON.stringify(results.result)} */}
-      {/* <Button variant="outline-light" >
-        Search
-      </Button> */}
+      {/* <SearchedItem /> */}
     </div>
   );
 };

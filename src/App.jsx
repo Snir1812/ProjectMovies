@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import Footer from "./components/footer/Footer";
 import LoginPage from "./pages/LoginPage";
 import Comments from "./pages/Comments";
+import useMovies from "./hooks/useMovies";
 // import SecondNav from "./components/secondNav/SecondNav";
 // import CategoryMovies from "./pages/CategoryMovies";
 

@@ -5,14 +5,18 @@ import { useNavigate } from "react-router-dom";
 import "./MovieItem.css";
 import DeleteMovieButton from "../DeleteMovieButton";
 import AddRemoveFavoriteButton from "../AddRemoveFavoriteButton";
+import { imageUrl } from "../../services/movies-service";
 
 const MovieItem = ({ movie }) => {
   const navigate = useNavigate();
-
   return (
     <div className="card-item">
       <div className="average">{movie.vote_average}</div>
-      <img className="img-card" src={movie.poster_path} alt="movie poster" />
+      <img
+        className="img-card"
+        src={imageUrl(movie.poster_path)}
+        alt="movie poster"
+      />
       <div className="item-icons">
         <AddRemoveFavoriteButton movie={movie} />
         <button

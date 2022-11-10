@@ -7,15 +7,15 @@ import SortRatingButton from "../components/sortRatingButton/SortRatingButton";
 import useMovies from "../hooks/useMovies";
 import { useSearchMovies } from "../hooks/searchMovie";
 // import { useSelector } from "react-redux";
+import useSwitchMovies from "../context/useSwitchMovies";
+import { useEffect } from "react";
 
 const Movies = ({ category }) => {
-  // const searchedQuary = useSelector((state) => state.searched.quary);
-  // const [movies1] = useSearchMovies(searchedQuary);
-  const movies = useSelector((s) => s.movie.movies);
-  // const searched = useSelector((state) => state.searched.quary);
-  useMovies(category);
-  // console.log(movies.map((x) => x.release_date));
-  // console.log(movies);
+  const { movieResultsSwitch, setCategory } = useSwitchMovies(category);
+
+  useEffect(() => {
+    setCategory(category);
+  }, [category, setCategory]);
 
   return (
     <div className="container">
@@ -28,7 +28,7 @@ const Movies = ({ category }) => {
       </div>
       {/* <div></div> */}
       <div className="card-list">
-        {movies.map((m) => (
+        {movieResultsSwitch.map((m) => (
           <MovieItem key={m.id} movie={m} title={m.title} />
         ))}
       </div>
