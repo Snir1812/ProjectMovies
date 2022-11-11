@@ -12,9 +12,9 @@ import { AiTwotoneCalendar } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { AiFillInstagram } from "react-icons/ai";
-import { ImTelegram } from "react-icons/im";
-import { useSelector } from "react-redux";
+import { FaGithub } from "react-icons/fa";
+import { GrLinkedin } from "react-icons/gr";
+// import { useSelector } from "react-redux";
 
 const About = () => {
   // const darkToggle = useSelector((state) => state.theme);
@@ -55,11 +55,11 @@ const About = () => {
               <a href="https://twitter.com/snir_agi">
                 <AiFillTwitterCircle className="icon-info" />
               </a>
-              <a href="https://www.instagram.com/snir_agi/">
-                <AiFillInstagram className="icon-info" />
+              <a href="https://github.com/Snir1812">
+                <FaGithub className="icon-info" />
               </a>
-              <a href="">
-                <ImTelegram className="icon-info" />
+              <a href="https://www.linkedin.com/in/snir-agi-222bb2233/">
+                <GrLinkedin className="icon-info" />
               </a>
             </div>
           </div>
@@ -116,7 +116,7 @@ const About = () => {
             <div>
               <h6>C#</h6>
               <p className="skill">
-                <p className="in-skill w-25">25%</p>
+                <p className="in-skill w-50">50%</p>
               </p>
             </div>
           </div>
