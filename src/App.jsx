@@ -31,11 +31,11 @@ const App = () => {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/about" element={<About />} />
         <Route path="/movies/:movieId" element={<MovieDetails />} />
-        <Route path="/history" element={<Movies category="36" />} />
+        {/* <Route path="/history" element={<Movies category="36" />} />
         <Route path="/drama" element={<Movies category="18" />} />
         <Route path="/comedy" element={<Movies category="35" />} />
         <Route path="/romance" element={<Movies category="10749" />} />
-        <Route path="/action" element={<Movies category="28" />} />
+        <Route path="/action" element={<Movies category="28" />} /> */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/comments" element={<Comments />} />
       </Routes>

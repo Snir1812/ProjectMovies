@@ -8,16 +8,17 @@ import { useState } from "react";
 import { useSearchMovies } from "../../hooks/searchMovie";
 import MovieItem from "../movieItem/MovieItem";
 import useSwitchMovies from "../../context/useSwitchMovies";
+import { search } from "../../features/movies/movies-slice";
+import { useDispatch } from "react-redux";
 
 const Search = () => {
-  const { setSearch } = useSwitchMovies();
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const [text, setText] = useState();
   // const [results] = useSearchMovies(text);
   // console.log(search);
 
   const handleSubmit = (text) => {
-    setSearch(text);
+    dispatch(search(text));
     // console.log(results.result);
   };
 
@@ -40,8 +41,8 @@ const Search = () => {
         placeholder="Search"
         className="me-2 text-center search"
         aria-label="Search"
-        onChange={(e) => handleSubmit(e.target.value)}
       />
+      <button onClick={(e) => handleSubmit(e.target.value)}>Search</button>
       {/* <SearchedItem /> */}
     </div>
   );

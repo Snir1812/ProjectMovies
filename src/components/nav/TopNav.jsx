@@ -9,13 +9,21 @@ import { useDispatch, useSelector } from "react-redux";
 // import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
-import { fetchMovies } from "../../features/movies/movies-slice";
+import {
+  changeCategory,
+  fetchMovies,
+} from "../../features/movies/movies-slice";
 // import LoginButton from "../login/LoginButton";
 // import Search from "../search/Search";
 
 const TopNav = () => {
   const darkToggle = useSelector((state) => state.theme);
   const dispatch = useDispatch();
+
+  const setCategory = (category) => {
+    dispatch(changeCategory(category));
+  };
+
   return (
     <Navbar
       expand="lg"
@@ -44,11 +52,21 @@ const TopNav = () => {
                 className="border-0"
               />
               <Dropdown.Menu>
-                <Dropdown.Item href="/history">History</Dropdown.Item>
-                <Dropdown.Item href="/drama">Drama</Dropdown.Item>
-                <Dropdown.Item href="/comedy">Comedy</Dropdown.Item>
-                <Dropdown.Item href="/romance">Romance</Dropdown.Item>
-                <Dropdown.Item href="/action">Action</Dropdown.Item>
+                <Dropdown.Item onClick={() => setCategory("36")}>
+                  History
+                </Dropdown.Item>
+                <Dropdown.Item onClick={() => setCategory("18")}>
+                  Drama
+                </Dropdown.Item>
+                <Dropdown.Item onClick={() => setCategory("35")}>
+                  Comedy
+                </Dropdown.Item>
+                <Dropdown.Item onClick={() => setCategory("10749")}>
+                  Romance
+                </Dropdown.Item>
+                <Dropdown.Item onClick={() => setCategory("28")}>
+                  Action
+                </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <TopNavLink to="/favorites" label="Favorites" />

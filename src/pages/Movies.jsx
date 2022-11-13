@@ -10,13 +10,9 @@ import { useSearchMovies } from "../hooks/searchMovie";
 import useSwitchMovies from "../context/useSwitchMovies";
 import { useEffect } from "react";
 
-const Movies = ({ category }) => {
-  const { movieResultsSwitch, setCategory } = useSwitchMovies(category);
-
-  useEffect(() => {
-    setCategory(category);
-  }, [category, setCategory]);
-
+const Movies = () => {
+  useMovies();
+  const movies = useSelector((state) => state.movie.search);
   return (
     <div className="container">
       <div className="search-div">
@@ -28,7 +24,7 @@ const Movies = ({ category }) => {
       </div>
       {/* <div></div> */}
       <div className="card-list">
-        {movieResultsSwitch.map((m) => (
+        {movies.map((m) => (
           <MovieItem key={m.id} movie={m} title={m.title} />
         ))}
       </div>
