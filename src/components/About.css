@@ -1,4 +1,90 @@
-.cv-div {
+@media (max-width: 767px) {
+  .cv-div {
+    height: 790px;
+    width: 580px;
+    background: rgb(88, 150, 212);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+    /* color: white; */
+  }
+  .icon-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .cv-div {
+    height: 770px;
+    width: 680px;
+    background: rgb(88, 150, 212);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+    /* color: white; */
+  }
+  .icon-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .cv-div {
+    height: 770px;
+    width: 800px;
+    background: rgb(88, 150, 212);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+    /* color: white; */
+  }
+  .icon-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .cv-div {
+    height: 710px;
+    width: 1000px;
+    background: rgb(88, 150, 212);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+    /* color: white; */
+  }
+  .icon-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+/* .cv-div {
   height: 710px;
   width: 1000px;
   background: rgb(88, 150, 212);
@@ -8,24 +94,7 @@
   padding: 10px;
   display: flex;
   gap: 0.5rem;
-  /* color: white; */
-}
-@media (max-width: 767px) {
-}
-/* @media (min-width: 576px) {
 } */
-
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-}
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-}
-
-/* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-}
 .cv-left {
   height: 100%;
   width: 40%;
@@ -53,6 +122,12 @@
   background: rgba(255, 255, 255, 0.212);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+/* .icon-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+} */
 .icon-info {
   font-size: 35px;
   color: rgb(49, 48, 48);

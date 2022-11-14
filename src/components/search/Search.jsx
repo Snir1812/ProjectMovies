@@ -10,6 +10,7 @@ import MovieItem from "../movieItem/MovieItem";
 import useSwitchMovies from "../../context/useSwitchMovies";
 import { search } from "../../features/movies/movies-slice";
 import { useDispatch } from "react-redux";
+import { IoMdSearch } from "react-icons/io";
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -39,10 +40,15 @@ const Search = () => {
         name="text"
         type="search"
         placeholder="Search"
-        className="me-2 text-center search"
+        className="search"
         aria-label="Search"
       />
-      <button onClick={(e) => handleSubmit(e.target.value)}>Search</button>
+      <button
+        className="button-search"
+        onClick={(e) => handleSubmit(e.target.value)}
+      >
+        <IoMdSearch />
+      </button>
       {/* <SearchedItem /> */}
     </div>
   );

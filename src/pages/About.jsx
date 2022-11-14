@@ -45,7 +45,7 @@ const About = () => {
             <p>
               <GrLanguage /> Hebrew , English
             </p>
-            <div className=" d-flex align-items-center justify-content-center gap-4">
+            <div className="icon-div">
               <a href="https://www.facebook.com/profile.php?id=100001236386517">
                 <BsFacebook className="icon-info" />
               </a>
