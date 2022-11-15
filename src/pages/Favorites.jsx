@@ -5,7 +5,7 @@ import MovieItem from "../components/movieItem/MovieItem";
 import "../components/Movies.css";
 
 const Favorites = () => {
-  const movies = useSelector((s) => s.movie.movies).filter((m) => m.isFavorite);
+  const movies = useSelector((s) => s.movie.search).filter((m) => m.isFavorite);
   /**const [movies, setMovies] = useState([]);
   useEffect(() => {
     const saved = localStorage.getItem("movies");
