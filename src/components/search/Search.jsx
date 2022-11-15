@@ -7,19 +7,20 @@ import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
 import { useSearchMovies } from "../../hooks/searchMovie";
 import MovieItem from "../movieItem/MovieItem";
-import useSwitchMovies from "../../context/useSwitchMovies";
 import { search } from "../../features/movies/movies-slice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { IoMdSearch } from "react-icons/io";
 
 const Search = () => {
   const dispatch = useDispatch();
+  const category = useSelector((state) => state.movie.category);
   // const [text, setText] = useState();
   // const [results] = useSearchMovies(text);
   // console.log(search);
 
-  const handleSubmit = (text) => {
-    dispatch(search(text));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    search(e.target[0].value, category, dispatch);
     // console.log(results.result);
   };
 
@@ -35,7 +36,7 @@ const Search = () => {
   // };
 
   return (
-    <div className=" d-flex ">
+    <form className=" d-flex " onSubmit={(e) => handleSubmit(e)}>
       <input
         name="text"
         type="search"
@@ -43,14 +44,11 @@ const Search = () => {
         className="search"
         aria-label="Search"
       />
-      <button
-        className="button-search"
-        onClick={(e) => handleSubmit(e.target.value)}
-      >
+      <button className="button-search" type="submit">
         <IoMdSearch />
       </button>
       {/* <SearchedItem /> */}
-    </div>
+    </form>
   );
 };
 

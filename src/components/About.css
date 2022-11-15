@@ -11,6 +11,18 @@
     gap: 0.5rem;
     /* color: white; */
   }
+  .cv-div-dark {
+    height: 790px;
+    width: 580px;
+    background: rgb(1, 55, 109);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+    color: white;
+  }
   .icon-div {
     display: flex;
     align-items: center;
@@ -32,6 +44,18 @@
     display: flex;
     gap: 0.5rem;
     /* color: white; */
+  }
+  .cv-div-dark {
+    height: 770px;
+    width: 680px;
+    background: rgb(1, 55, 109);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+    color: white;
   }
   .icon-div {
     display: flex;
@@ -55,6 +79,18 @@
     gap: 0.5rem;
     /* color: white; */
   }
+  .cv-div-dark {
+    height: 770px;
+    width: 800px;
+    background: rgb(1, 55, 109);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+    color: white;
+  }
   .icon-div {
     display: flex;
     align-items: center;
@@ -76,6 +112,18 @@
     display: flex;
     gap: 0.5rem;
     /* color: white; */
+  }
+  .cv-div-dark {
+    height: 710px;
+    width: 1000px;
+    background: rgb(1, 55, 109);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    display: flex;
+    gap: 0.5rem;
+    color: white;
   }
   .icon-div {
     display: flex;
@@ -135,9 +183,23 @@
   border-radius: 20px;
   padding: 5px;
 }
+.icon-info-dark {
+  font-size: 35px;
+  color: rgb(227, 222, 222);
+  border: 1px solid rgba(0, 0, 0, 0.239);
+  border-radius: 20px;
+  padding: 5px;
+}
 .icon-info:hover {
   font-size: 35px;
   color: rgba(61, 61, 61, 0.728);
+  border: 1px solid rgba(0, 0, 0, 0.239);
+  border-radius: 20px;
+  padding: 5px;
+}
+.icon-info-dark:hover {
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.41);
   border: 1px solid rgba(0, 0, 0, 0.239);
   border-radius: 20px;
   padding: 5px;

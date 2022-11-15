@@ -13,7 +13,7 @@ const MovieDetails = () => {
   const darkToggle = useSelector((state) => state.theme);
 
   const mid = Number(movieId);
-  const movie = useSelector((state) => state.movie.movies).find(
+  const movie = useSelector((state) => state.movie.search).find(
     (m) => m.id === mid
   );
 
@@ -47,7 +47,7 @@ const MovieDetails = () => {
         </button>
         <button
           className="btn border-0"
-          onClick={(e) => {
+          onClick={() => {
             dispatch(toggleFavorite(movie.id));
           }}
         >

@@ -22,6 +22,31 @@
   justify-content: center;
   gap: 3rem;
 }
-.icon {
-  list-style: none;
+.icon-footer {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.753);
+  border: 1px solid rgba(0, 0, 0, 0.239);
+  border-radius: 20px;
+  padding: 5px;
+}
+.icon-footer:hover {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.556);
+  border: 1px solid rgba(0, 0, 0, 0.239);
+  border-radius: 20px;
+  padding: 5px;
+}
+.icon-footer-dark {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.732);
+  border: 1px solid rgba(0, 0, 0, 0.239);
+  border-radius: 20px;
+  padding: 5px;
+}
+.icon-footer-dark:hover {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.429);
+  border: 1px solid rgba(0, 0, 0, 0.239);
+  border-radius: 20px;
+  padding: 5px;
 }

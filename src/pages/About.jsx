@@ -15,13 +15,15 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
 // import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const About = () => {
   // const darkToggle = useSelector((state) => state.theme);
+  const darkToggle = useSelector((state) => state.theme);
 
   return (
     <div className="container general-page">
-      <div className="cv-div">
+      <div className={darkToggle.darkTheme ? "cv-div-dark" : "cv-div"}>
         <div className="cv-left">
           <div className="cv-imgDiv">
             <p>Snir Agi</p>
@@ -47,19 +49,39 @@ const About = () => {
             </p>
             <div className="icon-div">
               <a href="https://www.facebook.com/profile.php?id=100001236386517">
-                <BsFacebook className="icon-info" />
+                <BsFacebook
+                  className={
+                    darkToggle.darkTheme ? "icon-info-dark" : "icon-info"
+                  }
+                />
               </a>
               <a href="https://wa.me/0527714077">
-                <IoLogoWhatsapp className="icon-info" />
+                <IoLogoWhatsapp
+                  className={
+                    darkToggle.darkTheme ? "icon-info-dark" : "icon-info"
+                  }
+                />
               </a>
               <a href="https://twitter.com/snir_agi">
-                <AiFillTwitterCircle className="icon-info" />
+                <AiFillTwitterCircle
+                  className={
+                    darkToggle.darkTheme ? "icon-info-dark" : "icon-info"
+                  }
+                />
               </a>
               <a href="https://github.com/Snir1812">
-                <FaGithub className="icon-info" />
+                <FaGithub
+                  className={
+                    darkToggle.darkTheme ? "icon-info-dark" : "icon-info"
+                  }
+                />
               </a>
               <a href="https://www.linkedin.com/in/snir-agi-222bb2233/">
-                <GrLinkedin className="icon-info" />
+                <GrLinkedin
+                  className={
+                    darkToggle.darkTheme ? "icon-info-dark" : "icon-info"
+                  }
+                />
               </a>
             </div>
           </div>

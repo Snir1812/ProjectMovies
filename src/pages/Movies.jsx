@@ -7,7 +7,6 @@ import SortRatingButton from "../components/sortRatingButton/SortRatingButton";
 import useMovies from "../hooks/useMovies";
 import { useSearchMovies } from "../hooks/searchMovie";
 // import { useSelector } from "react-redux";
-import useSwitchMovies from "../context/useSwitchMovies";
 import { useEffect } from "react";
 
 const Movies = () => {

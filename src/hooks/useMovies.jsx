@@ -7,10 +7,8 @@ const useMovies = () => {
   const category = useSelector((state) => state.movie.category);
 
   useEffect(() => {
-    if (category) {
-      dispatch(fetchMovies(category));
-      console.log(category);
-    }
+    dispatch(fetchMovies(category));
+    console.log(category);
   }, [category, dispatch]);
 };
 

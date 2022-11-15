@@ -18,8 +18,7 @@
   flex-direction: column;
   gap: 1rem;
   padding: 20px;
-  box-shadow: rgba(255, 255, 255, 0.298) 0px 3px 6px,
-    rgba(255, 255, 255, 0.163) 0px 3px 6px;
+  box-shadow: rgba(68, 67, 67, 0.648) 0px 3px 6px, rgb(57, 56, 56) 0px 3px 6px;
   color: white;
   border: 1px solid rgba(0, 0, 0, 0.238);
 }
@@ -32,7 +31,7 @@
 }
 .add-input-dark {
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.295);
   background: rgba(255, 255, 255, 0.106);
   width: 183px;
   height: 28px;
