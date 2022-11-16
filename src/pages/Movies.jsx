@@ -15,11 +15,11 @@ const Movies = () => {
   return (
     <div className="container">
       <div className="search-div">
+        <Search />
         <div>
           <SortAzButton />
           <SortRatingButton />
         </div>
-        <Search />
       </div>
       {/* <div></div> */}
       <div className="card-list">

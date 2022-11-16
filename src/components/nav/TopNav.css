@@ -45,3 +45,13 @@
   border: 1px black solid;
   color: black;
 }
+@media (max-width: 991px) {
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background: #ffffffa0;
+    border-radius: 12px;
+    padding: 20px;
+  }
+}

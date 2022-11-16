@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { toggleFavorite } from "../features/movies/movies-slice";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import "../components/MovieDetails.css";
+import { imageUrl } from "../services/movies-service";
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -24,36 +25,45 @@ const MovieDetails = () => {
   }
 
   return (
-    <div
-      // className="container item-details"
-      className={
-        darkToggle.darkTheme
-          ? "container item-details-dark"
-          : "container item-details"
-      }
-    >
-      <h2>{movie.title}</h2>
-      <img className="img-details" src={movie.poster_path} alt="movie poster" />
-      <p className="text-center">{movie.overview}</p>
-      <p>{movie.release_date}</p>
-      <div className="icons-details">
-        <button
-          className="btn-back"
-          onClick={() => {
-            navigate(-1);
-          }}
-        >
-          Back
-        </button>
-        <button
-          className="btn border-0"
-          onClick={() => {
-            dispatch(toggleFavorite(movie.id));
-          }}
-        >
-          {movie.isFavorite && <MdOutlineFavorite style={iconStyles} />}
-          {!movie.isFavorite && <MdOutlineFavoriteBorder style={iconStyles} />}
-        </button>
+    <div className="container item-div">
+      <div
+        className={
+          darkToggle.darkTheme
+            ? "container item-details-dark"
+            : "container item-details"
+        }
+      >
+        <img
+          className="img-details"
+          src={imageUrl(movie.poster_path)}
+          alt="movie poster"
+        />
+        <div>
+          <h2>{movie.title}</h2>
+          <p>{movie.overview}</p>
+          <p>{movie.release_date}</p>
+          <div className="icons-details">
+            <button
+              className={darkToggle.darkTheme ? "btn-back-dark" : "btn-back"}
+              onClick={() => {
+                navigate(-1);
+              }}
+            >
+              Back
+            </button>
+            <button
+              className="btn border-0"
+              onClick={() => {
+                dispatch(toggleFavorite(movie.id));
+              }}
+            >
+              {movie.isFavorite && <MdOutlineFavorite style={iconStyles} />}
+              {!movie.isFavorite && (
+                <MdOutlineFavoriteBorder style={iconStyles} />
+              )}
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

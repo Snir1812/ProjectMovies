@@ -6,9 +6,12 @@ import "./MovieItem.css";
 import DeleteMovieButton from "../DeleteMovieButton";
 import AddRemoveFavoriteButton from "../AddRemoveFavoriteButton";
 import { imageUrl } from "../../services/movies-service";
+import { useSelector } from "react-redux";
 
 const MovieItem = ({ movie }) => {
+  const darkToggle = useSelector((state) => state.theme);
   const navigate = useNavigate();
+
   return (
     <div className="card-item">
       <div className="average">{movie.vote_average}</div>
@@ -20,7 +23,10 @@ const MovieItem = ({ movie }) => {
       <div className="item-icons">
         <AddRemoveFavoriteButton movie={movie} />
         <button
-          className="btn-read-more"
+          // className="btn-read-more"
+          className={
+            darkToggle.darkTheme ? "btn-read-more-dark" : "btn-read-more"
+          }
           onClick={() => {
             navigate(`/movies/${movie.id}`);
           }}
