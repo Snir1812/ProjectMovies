@@ -38,6 +38,9 @@ const TopNav = () => {
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="humburger" />
         {/* --- */}
+        <span className="dm1">
+          <DarkToggle />
+        </span>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <TopNavLink to="/" label="Home" />
@@ -77,7 +80,9 @@ const TopNav = () => {
         {/* <div className=" d-flex gap-3 justify-content-center align-items-center"> */}
         {/* <Search /> */}
         {/* <LoginButton /> */}
-        <DarkToggle />
+        <span className="dm2">
+          <DarkToggle />
+        </span>
         {/* </div> */}
         {/* <Search /> */}
       </Container>
