@@ -2,9 +2,12 @@ import React from "react";
 import "../components/GeneralPageCss.css";
 import { useSelector } from "react-redux";
 import "../components/Home.css";
+import Accordion from "react-bootstrap/Accordion";
 
 const Home = () => {
   const darkToggle = useSelector((state) => state.theme);
+
+  // const dispatch = useDispatch();
 
   return (
     <div
@@ -14,84 +17,262 @@ const Home = () => {
           : "container home-page"
       }
     >
-      <div>
-        <h2>My UI Project - HackerU</h2>
-        <p>
-          In the course we learned several programming languages - Html , Css ,
-          JavaScript.
-          <br /> We had to choose a topic for the project and apply everything
-          we learned in the project.
-          <br /> This project was important because it made me understand
-          everything we have learned so far and it helped me to know how
-          everything fits together.
-          <br /> I hope I implemented things in the best way, and my investment
-          is reflected.
-        </p>
+      <div className="div1">
+        <div className=" w-25 div-info">
+          <p>Name : Snir Agi</p>
+          <p>ID : 212620116</p>
+          <p>Email : sniragi123@gmail.com </p>
+          <p>Course number : D110422ER </p>
+        </div>
+        <h2 className=" w-50">My UI Project - HackerU</h2>
+        <span className=" w-25"></span>
       </div>
-      <div>
+      <div className="div2">
         <h2>About My Project</h2>
         <p>
-          The topic I chose is a movie site.
-          <br /> In my project I used in Html , Css , JavaScript and ReactJs (
-          library of JavaScript ) , out API and I built on it Slice , in the
-          Slice I created functions that editing and changing the API.
-          <br />
-          The site is responsive ( from 700px to up ).
+          In the course we were asked to make a summary project of all the study
+          material we learned on the client side (UI) and in it to use all the
+          programming languages, language libraries and techniques we had
+          accumulated. <br /> We were asked to choose a topic, and use the topic
+          for the benefit of building the project that applies the studied
+          material. <br />
+          The topic I chose is a movie site and it will be my final client side
+          (UI) project. <br /> This site will have several options, among them
+          "automatic" updating of movies through an external API, filtering by
+          categories, filtering by search line and sorting the movies from A to
+          Z and ratings from high to low. <br /> The site is responsive to a
+          variety of device sizes. <br /> The site contains routed pages, and in
+          addition contains 2 layers of depth. <br /> This project uses Html,
+          Css, JavaScript and React , And the design part in Grid and Flex in
+          different places on the website. <br />
+          So far this has been a short and quick explanation of my project, from
+          here you will get a detailed explanation of each and every part of the
+          site in order to show what we have done and explain it in the best
+          possible way.
         </p>
       </div>
-      <div>
-        <h4>Explanation on the header</h4>
-        <p> My header is divided into 3</p>
-        <h5>Site logo</h5>
+      <div className="div3">
+        {/* <h4>Header</h4> */}
+        <h2>Explanation on the header</h2>
+        <p> My header is divided into 3 parts</p>
+        <div className=" d-flex align-items-center justify-content-center gap-3">
+          <div className="div3-card">
+            {/* <h5 className="header-card">Site logo</h5> */}
+            <div className="up-card">Site logo</div>
+            <div className="down-card">
+              this part is design only, clicking on it will take you to the home
+              page (this page).
+            </div>
+          </div>
+          <div className="div3-card">
+            <div className="up-card">Nav bar</div>
+            <div className="down-card">
+              this part is responsible for the routed pages (Routes), user
+              navigation on the site.
+            </div>
+          </div>
+          <div className="div3-card">
+            <div className="up-card">Dark mode button</div>
+            <div className="down-card">
+              a button that is responsible for the visibility of the site,
+              replaces the design by a Slice function that changes the state and
+              thus the design of the site changes from light to dark.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="div4">
+        {/* <h4>Footer</h4> */}
+        <h2>Explanation on the footer</h2>
         <p>
-          logo of my website and if you click on it , it takes you to the home
-          page.
-        </p>
-        <h5>Nav bar</h5>
-        <p> The nav bar is responsible for site navigation.</p>
-        <h5>Dark mode button</h5>
-        <p>
-          A button that changes the design of the site between dark mode and
-          normal mode , by Slice function.
+          This part is designed at the most basic level, where there are icons
+          that by clicking on them, the user will navigate to my personal
+          profiles on the selected social media.
         </p>
       </div>
-      <div>
-        <h4>Explanation on the footer</h4>
-        <p>My footer has 5 buttons that take the user to my social profiles.</p>
+      <div className="div5">
+        {/* <h4>Main</h4> */}
+        <h2>Explanation on the pages</h2>
+        <Accordion defaultActiveKey="0" flush>
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>Home</Accordion.Header>
+            <Accordion.Body>
+              This page , contains the details about my project
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>Movies</Accordion.Header>
+            <Accordion.Body>
+              <div>
+                This is the main part of the site, where updated movies are
+                shown through an external API that I introduced to Slice and
+                with which I can control the set of movies I receive. <br />
+                This slice is connected to the website by the Store which is
+                connected to the index.js file. <br />
+                My control is reflected in the fact that the user can enter the
+                movies page but in addition he has control over the movie
+                category which I receive and with this every time the user
+                changes a category the category is passed to me as a parameter
+                and it is in UseState which updates the API and thus the movies
+                are returned to the user filtered according to the selected
+                category. <br />
+                In addition, I built a function that the user sees as a text
+                field and there he can search, he gives a word/letter, I receive
+                the same text by pressing the search button and the text that
+                the user entered I receive and place as a parameter in Slice
+                that enters the URL that I received through the API and thus the
+                array of movies is filtered according to the same text that I
+                received from the user . <br /> The other 2 functions found on
+                this page are the sorting options that I give the user, next to
+                the text field there are 2 icons whose function is to sort the
+                movies, this is done using the Slice, the Slice has fixed
+                Reducers that at the click of a button activate a function that
+                I set, the user has the options to sort movies from A- Z and
+                sort by the rating of the movie (from highest to lowest). <br />
+                On this page the user receives the movies as tabs and has 3
+                buttons under each tab, <br /> 1. A "heart" button that adds the
+                same movie to the Favorites page by activating the Reducer found
+                in Slice, the Reducer puts the same movie into an array of
+                favorite movies that I defined that is displayed on the
+                Favorites page. <br /> 2. The Read More button, which the user
+                clicks on, navigates to the inner layer of that movie where
+                details about that movie are found. <br /> This navigation is
+                done by the fact that when the user clicks the button, he
+                navigates to the internal layer which receives the same movie
+                according to its ID as a parameter and maps the details of that
+                movie using a built-in function. <br /> 3. The "trash" button
+                that when clicked activates the reducer I built which is in
+                Slice and removes the same movie according to its ID from the
+                array shown to the user and thus the user "deletes" that movie.
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>Details Page</Accordion.Header>
+            <Accordion.Body>
+              Shows the details about the movie you selected. <br />
+              The user reaches this page by clicking on the "read more" button
+              on the card of a movie.
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>Favorite</Accordion.Header>
+            <Accordion.Body>
+              This page contains and displays the movies that the user has
+              chosen as favorites, this page receives from Slice the array of
+              movies that have entered the Favorite array and displays this
+              array, when the page detects that there are no movies in the
+              array, it navigates the user to the Movies page to select movies
+              to be displayed.
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="4">
+            <Accordion.Header>About</Accordion.Header>
+            <Accordion.Body>
+              This page shows my personal information, CV.{" "}
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="5">
+            <Accordion.Header>Comments</Accordion.Header>
+            <Accordion.Body>
+              This page displays user comments, On this page the user sees
+              previous comments and has the option to add his own comment using
+              a defined tab. <br /> The comments that the user sees are comments
+              from Slice designed and mapped to display them to the user. <br />{" "}
+              When the user enters a response and clicks the add button, this
+              response enters the array by Reducer and is displayed in addition
+              to the previous array.
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+        {/* <div>
+          <button onClick={() => setPage("1")}>Home</button>
+          <button onClick={() => setPage("2")}>Movies</button>
+          <button onClick={() => setPage("3")}>Details Page</button>
+          <button onClick={() => setPage("4")}>Favorite</button>
+          <button onClick={() => setPage("5")}>About</button>
+          <button onClick={() => setPage("6")}>Comments</button>
+        </div> */}
+        {/* <div>{(page, handelPage)}</div> */}
+        {/* <h4>Home</h4>
+        <p>This page , contains the details about my project</p>
+        <h4>Movies</h4>
+        <p>
+          This is the main part of the site, where updated movies are shown
+          through an external API that I introduced to Slice and with which I
+          can control the set of movies I receive. <br /> This slice is
+          connected to the website by the Store which is connected to the
+          index.js file. <br />
+          My control is reflected in the fact that the user can enter the movies
+          page but in addition he has control over the movie category which I
+          receive and with this every time the user changes a category the
+          category is passed to me as a parameter and it is in UseState which
+          updates the API and thus the movies are returned to the user filtered
+          according to the selected category. <br />
+          In addition, I built a function that the user sees as a text field and
+          there he can search, he gives a word/letter, I receive the same text
+          by pressing the search button and the text that the user entered I
+          receive and place as a parameter in Slice that enters the URL that I
+          received through the API and thus the array of movies is filtered
+          according to the same text that I received from the user . <br /> The
+          other 2 functions found on this page are the sorting options that I
+          give the user, next to the text field there are 2 icons whose function
+          is to sort the movies, this is done using the Slice, the Slice has
+          fixed Reducers that at the click of a button activate a function that
+          I set, the user has the options to sort movies from A- Z and sort by
+          the rating of the movie (from highest to lowest). <br />
+          On this page the user receives the movies as tabs and has 3 buttons
+          under each tab, <br /> 1. A "heart" button that adds the same movie to
+          the Favorites page by activating the Reducer found in Slice, the
+          Reducer puts the same movie into an array of favorite movies that I
+          defined that is displayed on the Favorites page. <br /> 2. The Read
+          More button, which the user clicks on, navigates to the inner layer of
+          that movie where details about that movie are found. <br /> This
+          navigation is done by the fact that when the user clicks the button,
+          he navigates to the internal layer which receives the same movie
+          according to its ID as a parameter and maps the details of that movie
+          using a built-in function. <br /> 3. The "trash" button that when
+          clicked activates the reducer I built which is in Slice and removes
+          the same movie according to its ID from the array shown to the user
+          and thus the user "deletes" that movie.
+        </p>
+        <h4>Details Page</h4>
+        <p>
+          Shows the details about the movie you selected. <br />
+          The user reaches this page by clicking on the "read more" button on
+          the card of a movie.
+        </p>
+        <h4>Favorites</h4>
+        <p>
+          This page contains and displays the movies that the user has chosen as
+          favorites, this page receives from Slice the array of movies that have
+          entered the Favorite array and displays this array, when the page
+          detects that there are no movies in the array, it navigates the user
+          to the Movies page to select movies to be displayed.
+        </p>
+        <h4>About</h4>
+        <p>This page shows my personal information, CV.</p>
+        <h4>Comments</h4>
+        <p>
+          This page displays user comments, On this page the user sees previous
+          comments and has the option to add his own comment using a defined
+          tab. <br /> The comments that the user sees are comments from Slice
+          designed and mapped to display them to the user. <br /> When the user
+          enters a response and clicks the add button, this response enters the
+          array by Reducer and is displayed in addition to the previous array.
+      </p>*/}
       </div>
-      <div>
-        <h4>Explanation on the pages</h4>
-        <h5>Home</h5>
-        <p> This page , It has an explanation of the project.</p>
-        <h5>Movies</h5>
+      <div className="div6">
+        <h2>Summary</h2>
         <p>
-          At the first click of the button it is a simple page , but it has
-          several options , the first option is choose category ( when you click
-          on a category , it goes into the API to sort according to it ) , and
-          the second option is when you are on the page you have a kind of text
-          field where you can search for movies ( the API receives a query and
-          searches according to it ) , In addition to that there are two more
-          buttons next to the text field that sort the movies by rating and from
-          A to Z. <br />
-          On the movies page , have a cards of movies are displayed and each
-          card has 3 buttons , "heart" adds to favorites , "read more" navigates
-          to the details page and "trash" delete the movie.
-        </p>
-        <h5>Details Page</h5>
-        <p> Shows the details about the movie you selected.</p>
-        <h5>Favorites</h5>
-        <p>
-          The favorites page shows cards of the movies you added to favorites ,
-          that you clicked on the "heart" icon.
-        </p>
-        <h5>About</h5>
-        <p>
-          In the about page you can see the information and details about me.
-        </p>
-        <h5>Comments</h5>
-        <p>
-          The comments page displays Slice of comments that i built and the user
-          has the option to add comment to the Slice.
+          So far was the explanation about my website, I hope that my investment
+          and learning were reflected in this project and I answered all its
+          requirements. <br /> This project is important in several respects,
+          this project helped me connect and understand the studied material
+          because during the learning we learn by subjects and each subject
+          separately and when you build such a project that contains all the
+          subjects studied I feel that everything connects together and is
+          understood at the highest level.
         </p>
       </div>
     </div>
