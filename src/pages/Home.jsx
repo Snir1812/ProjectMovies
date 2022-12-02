@@ -17,7 +17,10 @@ const Home = () => {
           : "container home-page"
       }
     >
-      <div className="div1">
+      <div
+        // className="div1"
+        className={darkToggle.darkTheme ? "div1-dark" : "div1"}
+      >
         <div className=" w-25 div-info">
           <p>Name : Snir Agi</p>
           <p>ID : 212620116</p>
@@ -51,11 +54,11 @@ const Home = () => {
           possible way.
         </p>
       </div>
-      <div className="div3">
+      <div className={darkToggle.darkTheme ? "div3-dark" : "div3"}>
         {/* <h4>Header</h4> */}
         <h2>Explanation on the header</h2>
         <p> My header is divided into 3 parts</p>
-        <div className=" d-flex align-items-center justify-content-center gap-3">
+        <div className="div3-div-cards">
           <div className="div3-card">
             {/* <h5 className="header-card">Site logo</h5> */}
             <div className="up-card">Site logo</div>
@@ -90,7 +93,7 @@ const Home = () => {
           profiles on the selected social media.
         </p>
       </div>
-      <div className="div5">
+      <div className={darkToggle.darkTheme ? "div5-dark" : "div5"}>
         {/* <h4>Main</h4> */}
         <h2>Explanation on the pages</h2>
         <Accordion defaultActiveKey="0" flush>

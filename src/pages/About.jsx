@@ -5,7 +5,7 @@ import "../components/About.css";
 import { FaHome } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { BsTelephoneFill } from "react-icons/bs";
-import { GrLanguage } from "react-icons/gr";
+import { MdLanguage } from "react-icons/md";
 import { BsBookHalf } from "react-icons/bs";
 import { ImStarHalf } from "react-icons/im";
 import { AiTwotoneCalendar } from "react-icons/ai";
@@ -39,13 +39,13 @@ const About = () => {
               <FaHome /> Petah Tikva , Israel
             </p>
             <p>
-              <IoIosMail /> sniragi123@gmail.com
+              <IoIosMail className=" fs-5" /> sniragi123@gmail.com
             </p>
             <p>
               <BsTelephoneFill /> +972527714077
             </p>
             <p>
-              <GrLanguage /> Hebrew , English
+              <MdLanguage className=" fs-5" /> Hebrew , English
             </p>
             <div className="icon-div">
               <a href="https://www.facebook.com/profile.php?id=100001236386517">
