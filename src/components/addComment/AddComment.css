@@ -19,8 +19,9 @@
   gap: 1rem;
   padding: 20px;
   box-shadow: rgba(68, 67, 67, 0.648) 0px 3px 6px, rgb(57, 56, 56) 0px 3px 6px;
-  color: white;
+  color: rgb(0, 0, 0);
   border: 1px solid rgba(0, 0, 0, 0.238);
+  background: rgba(200, 198, 198, 0.108);
 }
 .add-input {
   border-radius: 8px;
@@ -31,7 +32,7 @@
 }
 .add-input-dark {
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.295);
+  border: 1px solid rgba(0, 0, 0, 0.295);
   background: rgba(255, 255, 255, 0.106);
   width: 183px;
   height: 28px;
@@ -41,12 +42,17 @@
   background: none;
   border: 1px solid black;
 }
-.add-button-dark {
+.add-button:hover {
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid black;
+}
+/* .add-button-dark {
   border-radius: 8px;
   background: none;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  color: white;
-}
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  color: rgb(0, 0, 0);
+} */
 .input-label-add {
   display: flex;
   align-items: center;

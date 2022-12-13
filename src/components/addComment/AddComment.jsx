@@ -78,10 +78,7 @@ const AddComment = () => {
           }
         />
       </div>
-      <button
-        type="submit"
-        className={darkToggle.darkTheme ? "add-button-dark" : "add-button"}
-      >
+      <button type="submit" className="add-button">
         Add Comment
       </button>
     </form>
