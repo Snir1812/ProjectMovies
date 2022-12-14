@@ -1,3 +1,5 @@
+The file explanation about my project is in the project itself in the _home page_.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

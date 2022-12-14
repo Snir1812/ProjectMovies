@@ -3,11 +3,3 @@ export const movieUrl = (category) =>
 
 export const imageUrl = (image_path) =>
   `https://image.tmdb.org/t/p/original${image_path}`;
-
-// export const comments = [
-//   {
-//     MovieName: "Dragon Ball",
-//     YourOpinion: "Very good movie",
-//     Date: "12 / 2 / 2002",
-//   },
-// ];

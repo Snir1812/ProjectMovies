@@ -7,8 +7,6 @@ import Accordion from "react-bootstrap/Accordion";
 const Home = () => {
   const darkToggle = useSelector((state) => state.theme);
 
-  // const dispatch = useDispatch();
-
   return (
     <div
       className={
@@ -17,10 +15,7 @@ const Home = () => {
           : "container home-page"
       }
     >
-      <div
-        // className="div1"
-        className={darkToggle.darkTheme ? "div1-dark" : "div1"}
-      >
+      <div className={darkToggle.darkTheme ? "div1-dark" : "div1"}>
         <div className=" w-25 div-info">
           <p>Name : Snir Agi</p>
           <p>ID : 212620116</p>
@@ -55,12 +50,10 @@ const Home = () => {
         </p>
       </div>
       <div className={darkToggle.darkTheme ? "div3-dark" : "div3"}>
-        {/* <h4>Header</h4> */}
         <h2>Explanation on the header</h2>
         <p> My header is divided into 3 parts</p>
         <div className="div3-div-cards">
           <div className="div3-card">
-            {/* <h5 className="header-card">Site logo</h5> */}
             <div className="up-card">Site logo</div>
             <div className="down-card">
               this part is design only, clicking on it will take you to the home
@@ -85,7 +78,6 @@ const Home = () => {
         </div>
       </div>
       <div className="div4">
-        {/* <h4>Footer</h4> */}
         <h2>Explanation on the footer</h2>
         <p>
           This part is designed at the most basic level, where there are icons
@@ -94,7 +86,6 @@ const Home = () => {
         </p>
       </div>
       <div className={darkToggle.darkTheme ? "div5-dark" : "div5"}>
-        {/* <h4>Main</h4> */}
         <h2>Explanation on the pages</h2>
         <Accordion defaultActiveKey="0" flush>
           <Accordion.Item eventKey="0">
@@ -172,7 +163,7 @@ const Home = () => {
           <Accordion.Item eventKey="4">
             <Accordion.Header>About</Accordion.Header>
             <Accordion.Body>
-              This page shows my personal information, CV.{" "}
+              This page shows my personal information, CV.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5">
@@ -181,89 +172,18 @@ const Home = () => {
               This page displays user comments, On this page the user sees
               previous comments and has the option to add his own comment using
               a defined tab. <br /> The comments that the user sees are comments
-              from Slice designed and mapped to display them to the user. <br />{" "}
-              When the user enters a response and clicks the add button, this
-              response enters the array by Reducer and is displayed in addition
+              from Slice designed and mapped to display them to the user. <br />
+              When the user enters a comment and clicks the add button, this
+              comment enters the array by Reducer and is displayed in addition
               to the previous array.
+              <br />
+              In addition to this, the user has the ability to edit a comment,
+              this is done by pressing a button that looks like a pencil and
+              there he will replace the new comment with the comment that is in
+              the array.
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-        {/* <div>
-          <button onClick={() => setPage("1")}>Home</button>
-          <button onClick={() => setPage("2")}>Movies</button>
-          <button onClick={() => setPage("3")}>Details Page</button>
-          <button onClick={() => setPage("4")}>Favorite</button>
-          <button onClick={() => setPage("5")}>About</button>
-          <button onClick={() => setPage("6")}>Comments</button>
-        </div> */}
-        {/* <div>{(page, handelPage)}</div> */}
-        {/* <h4>Home</h4>
-        <p>This page , contains the details about my project</p>
-        <h4>Movies</h4>
-        <p>
-          This is the main part of the site, where updated movies are shown
-          through an external API that I introduced to Slice and with which I
-          can control the set of movies I receive. <br /> This slice is
-          connected to the website by the Store which is connected to the
-          index.js file. <br />
-          My control is reflected in the fact that the user can enter the movies
-          page but in addition he has control over the movie category which I
-          receive and with this every time the user changes a category the
-          category is passed to me as a parameter and it is in UseState which
-          updates the API and thus the movies are returned to the user filtered
-          according to the selected category. <br />
-          In addition, I built a function that the user sees as a text field and
-          there he can search, he gives a word/letter, I receive the same text
-          by pressing the search button and the text that the user entered I
-          receive and place as a parameter in Slice that enters the URL that I
-          received through the API and thus the array of movies is filtered
-          according to the same text that I received from the user . <br /> The
-          other 2 functions found on this page are the sorting options that I
-          give the user, next to the text field there are 2 icons whose function
-          is to sort the movies, this is done using the Slice, the Slice has
-          fixed Reducers that at the click of a button activate a function that
-          I set, the user has the options to sort movies from A- Z and sort by
-          the rating of the movie (from highest to lowest). <br />
-          On this page the user receives the movies as tabs and has 3 buttons
-          under each tab, <br /> 1. A "heart" button that adds the same movie to
-          the Favorites page by activating the Reducer found in Slice, the
-          Reducer puts the same movie into an array of favorite movies that I
-          defined that is displayed on the Favorites page. <br /> 2. The Read
-          More button, which the user clicks on, navigates to the inner layer of
-          that movie where details about that movie are found. <br /> This
-          navigation is done by the fact that when the user clicks the button,
-          he navigates to the internal layer which receives the same movie
-          according to its ID as a parameter and maps the details of that movie
-          using a built-in function. <br /> 3. The "trash" button that when
-          clicked activates the reducer I built which is in Slice and removes
-          the same movie according to its ID from the array shown to the user
-          and thus the user "deletes" that movie.
-        </p>
-        <h4>Details Page</h4>
-        <p>
-          Shows the details about the movie you selected. <br />
-          The user reaches this page by clicking on the "read more" button on
-          the card of a movie.
-        </p>
-        <h4>Favorites</h4>
-        <p>
-          This page contains and displays the movies that the user has chosen as
-          favorites, this page receives from Slice the array of movies that have
-          entered the Favorite array and displays this array, when the page
-          detects that there are no movies in the array, it navigates the user
-          to the Movies page to select movies to be displayed.
-        </p>
-        <h4>About</h4>
-        <p>This page shows my personal information, CV.</p>
-        <h4>Comments</h4>
-        <p>
-          This page displays user comments, On this page the user sees previous
-          comments and has the option to add his own comment using a defined
-          tab. <br /> The comments that the user sees are comments from Slice
-          designed and mapped to display them to the user. <br /> When the user
-          enters a response and clicks the add button, this response enters the
-          array by Reducer and is displayed in addition to the previous array.
-      </p>*/}
       </div>
       <div className="div6">
         <h2>Summary</h2>

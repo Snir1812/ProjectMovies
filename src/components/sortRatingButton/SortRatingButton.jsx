@@ -12,7 +12,6 @@ const SortRatingButton = () => {
   const handleSortZaMovie = () => {
     dispatch(sortZaMovies());
     console.log("sorted");
-    // console.log(title);
   };
 
   return (

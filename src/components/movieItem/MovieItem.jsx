@@ -1,6 +1,4 @@
 import React from "react";
-import "react-toastify/dist/ReactToastify.css";
-// import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import "./MovieItem.css";
 import DeleteMovieButton from "../DeleteMovieButton";
@@ -23,7 +21,6 @@ const MovieItem = ({ movie }) => {
       <div className="item-icons">
         <AddRemoveFavoriteButton movie={movie} />
         <button
-          // className="btn-read-more"
           className={
             darkToggle.darkTheme ? "btn-read-more-dark" : "btn-read-more"
           }

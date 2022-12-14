@@ -43,15 +43,6 @@ const moviesSlice = createSlice({
     changeCategory: (state, action) => {
       state.category = action.payload;
     },
-    /* let favSaved = localStorage.getItem("movies");
-      if (favSaved) {
-        const arr = JSON.parse(favSaved);
-        arr.push(state.movies[index]);
-        localStorage.setItem("movies", JSON.stringify(arr));
-      } else {
-        localStorage.setItem("movies", JSON.stringify([state.movies[index]]));
-      }*/
-
     removeMovies: (state, action) => {
       state.movies = state.movies.filter((item) => item.id !== action.payload);
       state.search = state.search.filter((item) => item.id !== action.payload);

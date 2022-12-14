@@ -1,11 +1,8 @@
 import React from "react";
-import EditComment from "../editComment/EditComment";
 import "./CommentItem.css";
-// import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
 const CommentItem = (m) => {
-  //   const dispatch = useDispatch();
   const darkToggle = useSelector((state) => state.theme);
 
   return (
@@ -15,12 +12,6 @@ const CommentItem = (m) => {
       <p>Movie's name : {m.MovieName}</p>
       <p>Your opinion : {m.YourOpinion}</p>
       <p>Date : {m.Date}</p>
-      {/* <EditComment
-        key={m.id}
-        MovieName={m.MovieName}
-        YourOpinion={m.YourOpinion}
-        Date={m.Date}
-      /> */}
     </div>
   );
 };

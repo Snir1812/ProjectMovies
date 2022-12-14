@@ -12,7 +12,6 @@ const SortAzButton = () => {
   const handleSortAzMovie = () => {
     dispatch(sortAzMovies());
     console.log("sorted");
-    // console.log(title);
   };
 
   return (

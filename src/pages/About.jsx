@@ -1,7 +1,6 @@
 import React from "react";
 import "../components/GeneralPageCss.css";
 import "../components/About.css";
-// import img from "../../public/logo192.png";
 import { FaHome } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -14,11 +13,9 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
-// import { useSelector } from "react-redux";
 import { useSelector } from "react-redux";
 
 const About = () => {
-  // const darkToggle = useSelector((state) => state.theme);
   const darkToggle = useSelector((state) => state.theme);
 
   return (

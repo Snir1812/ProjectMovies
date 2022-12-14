@@ -1,35 +1,9 @@
-/* .card-list {
-  padding: 15px 0 30px 0;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 45vh 45vh 45vh 45vh;
-  min-height: 78vh;
-  gap: 2rem;
-}
-.search-div {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  padding-top: 15px;
-  gap: 3rem;
-} */
-/* .comment {
-  height: 400px;
-  width: 200px;
-  background: white;
-  position: absolute;
-  top: 135px;
-  left: 87%;
-} */
-
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 767px) {
   .card-list {
     padding: 15px 0 30px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    /* grid-template-rows: auto; */
     grid-template-rows: auto;
     min-height: 78vh;
     gap: 2rem;
@@ -43,8 +17,6 @@
     gap: 2rem;
   }
 }
-/* @media (min-width: 576px) {
-} */
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -52,8 +24,6 @@
     padding: 15px 0 30px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    /* grid-template-rows: auto; */
     grid-template-rows: auto;
     min-height: 78vh;
     gap: 2rem;
@@ -62,7 +32,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: center; */
     padding-top: 27px;
     gap: 2rem;
   }
@@ -74,8 +43,6 @@
     padding: 15px 0 30px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    /* grid-template-rows: auto; */
     grid-template-rows: auto;
     min-height: 78vh;
     gap: 2rem;
@@ -84,7 +51,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: center; */
     padding-top: 27px;
     gap: 2rem;
   }
@@ -96,8 +62,6 @@
     padding: 15px 0 30px 0;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-    /* grid-template-rows: auto; */
     grid-template-rows: auto;
     min-height: 78vh;
     gap: 2rem;
@@ -106,7 +70,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: center; */
     padding-top: 27px;
     gap: 2rem;
   }

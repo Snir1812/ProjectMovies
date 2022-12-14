@@ -6,15 +6,12 @@ import TopNavLink from "./TopNavLink";
 import "./TopNav.css";
 import DarkToggle from "../DarkToggle";
 import { useDispatch, useSelector } from "react-redux";
-// import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 import {
   changeCategory,
   fetchMovies,
 } from "../../features/movies/movies-slice";
-// import LoginButton from "../login/LoginButton";
-// import Search from "../search/Search";
 
 const TopNav = () => {
   const darkToggle = useSelector((state) => state.theme);
@@ -77,14 +74,9 @@ const TopNav = () => {
             <TopNavLink to="/comments" label="Comments" />
           </Nav>
         </Navbar.Collapse>
-        {/* <div className=" d-flex gap-3 justify-content-center align-items-center"> */}
-        {/* <Search /> */}
-        {/* <LoginButton /> */}
         <span className="dm2">
           <DarkToggle />
         </span>
-        {/* </div> */}
-        {/* <Search /> */}
       </Container>
     </Navbar>
   );

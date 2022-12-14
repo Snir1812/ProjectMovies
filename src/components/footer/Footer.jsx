@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 import { BsFacebook } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { AiFillInstagram } from "react-icons/ai";
-import { ImTelegram } from "react-icons/im";
 import { FaGithub } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
 

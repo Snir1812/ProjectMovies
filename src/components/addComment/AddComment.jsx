@@ -1,25 +1,13 @@
 import React from "react";
-// import { useState } from "react";
 import { addComment } from "../../features/comments/comments-slice";
 import { v4 } from "uuid";
 import { useDispatch } from "react-redux";
-// import "../Comments.css";
 import "./AddComment.css";
 import { useSelector } from "react-redux";
 
 const AddComment = () => {
   const dispatch = useDispatch();
   const darkToggle = useSelector((state) => state.theme);
-
-  // const [MovieName, setMovieName] = useState("");
-  // const [YourOpinion, setYourOpinion] = useState("");
-  // const [Date, setDate] = useState("");
-
-  // const handleAddComment = () => {
-  //   dispatch(addComment(MovieName, YourOpinion, Date));
-  //   console.log("sorted");
-  //   // console.log(title);
-  // };
 
   const addCommentSubmit = (e) => {
     e.preventDefault();

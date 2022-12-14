@@ -5,9 +5,6 @@ import Search from "../components/search/Search";
 import SortAzButton from "../components/sortAzButton/SortAzButton";
 import SortRatingButton from "../components/sortRatingButton/SortRatingButton";
 import useMovies from "../hooks/useMovies";
-import { useSearchMovies } from "../hooks/searchMovie";
-// import { useSelector } from "react-redux";
-import { useEffect } from "react";
 
 const Movies = () => {
   useMovies();
@@ -21,7 +18,6 @@ const Movies = () => {
           <SortRatingButton />
         </div>
       </div>
-      {/* <div></div> */}
       <div className="card-list">
         {movies.map((m) => (
           <MovieItem key={m.id} movie={m} title={m.title} />
