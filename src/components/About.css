@@ -140,7 +140,9 @@
   width: 100%;
   height: 40%;
   background: rgba(255, 255, 255, 0.212);
-  background-image: url(../../public/logo192.png);
+  background-image: url(../../public/snir.png);
+  background-size: 100%;
+  background-position: center;
   padding: 10px 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

@@ -88,10 +88,9 @@ const About = () => {
             <div>
               <p>About Me</p>
               <p className=" fs-6">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Possimus praesentium ullam porro quasi? Asperiores rerum
-                veritatis libero aspernatur, id quis veniam ut mollitia culpa
-                laudantium reprehenderit placeat harum eos pariatur!
+                Hi, I'm Snir, in high school I studied economics and business
+                administration, I'm currently a soldier in the Israel Defense
+                Forces and trying to enter the high-tech fields.
               </p>
             </div>
             <div>
